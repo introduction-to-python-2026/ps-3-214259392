@@ -1,7 +1,7 @@
-
-def approximate_pi(n):
-    total = 0
-    for i in range(n):
-        total += ((-1) ** i) / (2 * i + 1)
-    leibniz_series = total *4    
-    return leibniz_series
+def approximate_pi(n_terms):
+    leibniz_series = []
+    for i in range(n_terms):
+        term = ((-1) ** i) / (2 * i + 1)
+        leibniz_series.append(term)
+    pi_approximation = sum(leibniz_series) * 4
+    return pi_approximation
